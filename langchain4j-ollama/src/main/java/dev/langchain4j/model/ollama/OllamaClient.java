@@ -106,8 +106,8 @@ class OllamaClient {
                             return;
                         }
                     }
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
+                } catch (Exception e) {
+                    onFailure(call, e);
                 }
             }
 
